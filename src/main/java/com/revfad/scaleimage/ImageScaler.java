@@ -38,6 +38,7 @@ public class ImageScaler {
             // TODO: if the following returns false, block until ready or error.
             graphics2d.drawImage(image, 0, 0, width, height, null);
             image = scaled;
+            graphics2d.dispose();
         } while (width > maxWidth || height > maxHeight);
         return scaled;
     }
